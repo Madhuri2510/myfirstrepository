@@ -2,7 +2,7 @@ GIT HUB
 -----------------------------------------
 https://gitforwindows.org/
 cd E:\CodeHere
-git init
+git init //myfirstchange
 git config --global user.name "Maaz"
 git config --global user.email "khanmaazm@gmail.com"
 Copy the code or do development in folder lets say E:\CodeHere
@@ -57,5 +57,5 @@ git remote rm origin  #to remove origin
 git rev-parse HEAD
 git reset --hard <old-commit-id>
 git revert HEAD
-git revert –m 1 HEAD
+git revert ï¿½m 1 HEAD
 git checkout -b master <commitid>

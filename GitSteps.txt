@@ -1,0 +1,61 @@
+GIT HUB
+-----------------------------------------
+https://gitforwindows.org/
+cd E:\CodeHere
+git init
+git config --global user.name "Maaz"
+git config --global user.email "khanmaazm@gmail.com"
+Copy the code or do development in folder lets say E:\CodeHere
+git init
+git add . #add current code to local git
+git add --all  #add code from current folder to repository
+git commit -m "Firstcommit"   #committed to local rep
+git checkout -b feature #create a branch copy all files and switch to new branch
+
+git remote add origin git@github.com:khanmaaz/dfsdf.git
+
+#To Add files again put files in folder
+git add --all
+git commit -m "Secondcommit"   #committed to local rep
+
+git status
+git log
+
+AWS
+----------------
+https://git-codecommit.ap-south-1.amazonaws.com/v1/repos/AIMRepos
+
+maazgitadmin-at-907994845253   hW0+B3a2qxUDK9YTxVu+BFXU1PeEBsaVFH8c3JihJYI=
+
+git remote add origin https://git-codecommit.ap-south-1.amazonaws.com/v1/repos/AIMRepos #needs to be done only once and will ask to login to AWS Code Commit
+git remote add secondorigin https://git-codecommit.ap-south-1.amazonaws.com/v1/repos/AIMRepos #one more remote git added named secondorigin 
+
+git clone https://git-codecommit.ap-south-1.amazonaws.com/v1/repos/AIMRepos  #will copy from URL to local computer
+git push --set-upstream origin master
+git push -u origin --all #to push to AWS Code Commit
+
+git remote rm origin  #to remove origin
+
+
+#Pull and Merge
+git init
+git checkout master #switch to master branch
+git checkout -b feature #create a branch copy all files and switch to new branch
+git add . #add current code to local git
+git commit -m "Description of change" #commit to local git
+git push -f <remote-name> <branch-name>
+git push origin feature #push feature branch from local git to remote git named origin and within the same branch
+git merge dev #merge dev branch to current branch in local git
+git pull origin master #will pull changes from the origin remote, master branch and merge them to the local checked-out branch
+git commit
+
+#Removing
+git remove -v   ---git rm
+git remote remove origin
+git remote rm origin  #to remove origin
+
+git rev-parse HEAD
+git reset --hard <old-commit-id>
+git revert HEAD
+git revert –m 1 HEAD
+git checkout -b master <commitid>
